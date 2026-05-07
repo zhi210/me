@@ -1,0 +1,18 @@
+{
+  "name": "胡耀芝",
+  "nameEn": "Yaozhi Hu",
+  "wordmark": "Yaozhi Hu @ ZJU",
+  "greeting": "您好",
+  "degree": "信息管理与信息系统专业 2023级本科生",
+  "university": { "name": "浙江大学", "url": "https://www.zju.edu.cn/" },
+  "school": { "name": "ZJU SOM", "fullName": "管理学院", "url": "http://www.som.zju.edu.cn/" },
+  "goal": "目标：数据分析 / 商业分析实习生",
+  "email": "3230105450@zju.edu.cn",
+  "phone": "19857197275",
+  "avatar": "images/profile/life_photo.png",
+  "summary": "我是浙江大学管理学院<strong>信息管理与信息系统</strong>专业在读学生。熟练掌握SQL、Python、C、数据分析、可视化及机器学习技术，具备实际项目与科研经验。",
+  "quote": "数据驱动决策，创新引领未来。",
+  "footerText": "Copyright © 胡耀芝 (Yaozhi Hu) · 浙江大学管理学院",
+  "resumePdf": "resume.pdf",
+  "resumeDownloadName": "胡耀芝_简历.pdf"
+}

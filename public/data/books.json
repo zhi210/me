@@ -1,0 +1,98 @@
+[
+  {
+    "title": "《数据之美》",
+    "author": "Nathan Yau",
+    "date": "2023年10月",
+    "cover": "images/books/data_visualization.png",
+    "coverAlt": "数据之美",
+    "link": "https://item.jd.com/10055719306770.html"
+  },
+  {
+    "title": "《信号与噪声》",
+    "author": "Nate Silver",
+    "date": "2023年12月",
+    "cover": "images/books/signal_noise.png",
+    "coverAlt": "信号与噪声",
+    "link": "https://item.jd.com/10211061678488.html"
+  },
+  {
+    "title": "《算法导论》",
+    "author": "Thomas H. Cormen",
+    "date": "2024年01月",
+    "cover": "images/books/algorithms.png",
+    "coverAlt": "算法导论",
+    "link": "https://item.jd.com/10110236527917.html"
+  },
+  {
+    "title": "《Python数据科学手册》",
+    "author": "Jake VanderPlas",
+    "date": "2024年02月",
+    "cover": "images/books/python_datascience.png",
+    "coverAlt": "Python数据科学手册",
+    "link": "https://item.jd.com/10107139690995.html"
+  },
+  {
+    "title": "《商业模式新生代》",
+    "author": "Alexander Osterwalder",
+    "date": "2024年03月",
+    "cover": "images/books/business_model_generation.png",
+    "coverAlt": "商业模式新生代",
+    "link": "https://item.jd.com/10197573762569.html"
+  },
+  {
+    "title": "《计量经济学》",
+    "author": "李子奈 潘文卿",
+    "date": "2024年04月",
+    "cover": "images/books/econometrics.png",
+    "coverAlt": "计量经济学",
+    "link": "https://item.jd.com/14549901.html"
+  },
+  {
+    "title": "《产品设计蓝图》",
+    "author": "C. Todd Lombardo",
+    "date": "2024年05月",
+    "cover": "images/books/product_roadmap.png",
+    "coverAlt": "产品设计蓝图",
+    "link": "https://item.jd.com/10180631776788.html"
+  },
+  {
+    "title": "《精益创业》",
+    "author": "Eric Ries",
+    "date": "2024年06月",
+    "cover": "images/books/lean_startup.png",
+    "coverAlt": "精益创业",
+    "link": "https://item.jd.com/10050047899201.html"
+  },
+  {
+    "title": "《深度学习》",
+    "author": "Ian Goodfellow",
+    "date": "2024年07月",
+    "cover": "images/books/deep_learning.png",
+    "coverAlt": "深度学习",
+    "link": "https://item.jd.com/10135262787752.html"
+  },
+  {
+    "title": "《宁静的力量》",
+    "author": "Ryan Holiday",
+    "date": "2024年08月",
+    "cover": "images/books/stillness.png",
+    "coverAlt": "宁静的力量",
+    "link": "https://item.jd.com/10034623741007.html"
+  },
+  {
+    "title": "《机器学习实战》",
+    "author": "奥雷利安·杰龙",
+    "date": "2024年09月",
+    "cover": "images/books/book11.png",
+    "coverAlt": "机器学习实战",
+    "link": "https://item.jd.com/10204137401092.html"
+  },
+  {
+    "title": "《微观经济学》",
+    "author": "达龙·阿西莫格鲁",
+    "date": "2024年10月",
+    "cover": "images/books/book12.png",
+    "coverAlt": "微观经济学",
+    "link": "https://item.jd.com/10119757899260.html"
+  }
+]
