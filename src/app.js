@@ -46,8 +46,8 @@ export function usePortfolio() {
   }
   function navigateTo(page) {
     currentPage.value = page
-    window.scrollTo(0, 0)  // 切页后回到顶部，模拟跳新页面的行为
   }
+
   function closeMenu() {
     menuOpen.value = false
   }
@@ -59,6 +59,34 @@ export function usePortfolio() {
     return classes.join(' ')
   }
 
+  // 滚动到指定元素，考虑 sticky 导航栏高度
+  function scrollToElement(el, block = 'start') {
+    if (!el) return
+    const headerHeight = 60 // sticky 导航栏估算高度
+    if (block === 'start') {
+      // 滚动到顶部，减去导航栏高度
+      const top = el.getBoundingClientRect().top + window.scrollY - headerHeight
+      window.scrollTo({ top, behavior: 'smooth' })
+    } else {
+      // 滚动到中间
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  }
+
+  // 高亮闪烁两次
+  function flashHighlight(el) {
+    if (!el) return
+    el.style.transition = 'background-color 0.4s ease'
+    const flash = () => {
+      el.style.backgroundColor = '#fffbeb'
+      setTimeout(() => {
+        el.style.backgroundColor = ''
+      }, 400)
+    }
+    flash()
+    setTimeout(flash, 850)
+  }
+
   function handleNavClick(item) {
     closeMenu()
     if (item.external) return
@@ -67,15 +95,35 @@ export function usePortfolio() {
     const cvSections = ['cv', 'practice', 'skills', 'books']
     if (cvSections.includes(item.id)) {
       navigateTo('cv')
-      // 等 DOM 渲染后再滚动到锚点
+      // 等 DOM 渲染后再滚动到锚点（需要额外延迟确保布局稳定）
       nextTick(() => {
-        const el = document.getElementById(item.id)
-        if (el) el.scrollIntoView({ behavior: 'smooth' })
+        setTimeout(() => {
+          const el = document.getElementById(item.id)
+          if (!el) return
+
+          if (item.id === 'practice' || item.id === 'skills') {
+            // 滚动到中间并高亮闪烁
+            scrollToElement(el, 'center')
+            flashHighlight(el)
+          } else {
+            // 滚动到顶部（减去导航栏高度）
+            scrollToElement(el, 'start')
+          }
+        }, 100)
       })
     } else {
+      // About 页面：滚动到顶部（减去导航栏高度）
       navigateTo('about')
+      nextTick(() => {
+        setTimeout(() => {
+          const el = document.getElementById('about')
+          if (el) scrollToElement(el, 'start')
+        }, 0)
+      })
     }
   }
+
+
 
   // ── scroll spy ──────────────────────────────────────────────────
   function setupScrollSpy() {

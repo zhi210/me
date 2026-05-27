@@ -91,12 +91,16 @@
         <div class="themes-section">
           <div class="themes-grid">
             <div
-              v-for="proj in projects"
+              v-for="proj in projects.slice(0, 3)"
               :key="proj.id"
               class="theme-card"
             >
               <div class="theme-inner">
-                <a :href="'#' + proj.id" class="theme-link">
+                <a 
+                    href="javascript:;" 
+                    class="theme-link" 
+                    @click="scrollToProject(proj.id)"
+                  >
                   <img class="theme-img" :src="proj.cardImg" :alt="proj.cardImgAlt">
                   <div class="theme-text">
                     <div class="theme-name">{{ proj.title }}</div>
@@ -157,10 +161,81 @@
             </div>
           </div>
         </div>
+
+        <!-- ===== 俄罗斯方块小游戏 ===== -->
+        <div class="game-band">
+          <div class="game-section">
+            <h2 class="game-title">🎮 俄罗斯方块</h2>
+
+            <div class="game-layout">
+              <!-- 左面板：储存 + 分数 + 最高分 + 等级 + 行数 -->
+              <div class="game-panel game-panel-left">
+                <div class="game-panel-box game-preview-box">
+                  <div class="game-panel-label">储存 (C)</div>
+                  <canvas id="holdCanvas" class="game-hold-canvas"></canvas>
+                </div>
+                <div class="game-panel-box">
+                  <div class="game-panel-label">分数</div>
+                  <div class="game-panel-value" id="scoreDisplay">0</div>
+                </div>
+                <div class="game-panel-box">
+                  <div class="game-panel-label">最高分</div>
+                  <div class="game-panel-value" id="highScoreDisplay">0</div>
+                </div>
+                <div class="game-stats-grid">
+                  <div class="game-panel-box">
+                    <div class="game-panel-label">等级</div>
+                    <div class="game-panel-value" id="levelDisplay">1</div>
+                  </div>
+                  <div class="game-panel-box">
+                    <div class="game-panel-label">行数</div>
+                    <div class="game-panel-value" id="linesDisplay">0</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 中间：画布 -->
+              <div class="game-canvas-wrap">
+                <div id="touchOverlay" class="game-touch-overlay">
+                  <canvas id="gameCanvas" class="game-canvas"></canvas>
+                </div>
+              </div>
+
+              <!-- 右面板：下一个 + 按钮 + 操作说明 -->
+              <div class="game-panel game-panel-right">
+                <div class="game-panel-box game-preview-box">
+                  <div class="game-panel-label">下一个</div>
+                  <canvas id="nextCanvas" class="game-next-canvas"></canvas>
+                </div>
+                <div class="game-btn-group">
+                  <a href="javascript:;" id="btnStart" class="game-btn game-btn-start">开始游戏</a>
+                  <a href="javascript:;" id="btnPause" class="game-btn game-btn-pause">暂停</a>
+                  <a href="javascript:;" id="btnRestart" class="game-btn game-btn-restart">重新开始</a>
+                </div>
+                <div class="game-help">
+                  <div class="game-help-title">操作说明</div>
+                  <div class="game-help-row"><span class="game-key">←</span><span class="game-key">→</span> 移动</div>
+                  <div class="game-help-row"><span class="game-key">↑</span> 旋转</div>
+                  <div class="game-help-row"><span class="game-key">↓</span> 加速下落</div>
+                  <div class="game-help-row"><span class="game-key">Space</span> 硬降</div>
+                  <div class="game-help-row"><span class="game-key">C</span> 储存</div>
+                  <div class="game-help-row"><span class="game-key">P</span> 暂停</div>
+                </div>
+              </div>
+            </div>
+
+
+            <p class="game-subtitle">
+              键盘方向键操作 · 按任意方向键开始
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- ===== CV ===== -->
+
     <div v-if="currentPage === 'cv'">
       <div class="page-content cv-content" v-if="cvData">
 
@@ -219,17 +294,22 @@
           </div>
         </div>
 
-        <!-- 实践活动 -->
+        <!-- 实践活动（时间轴） -->
         <div class="cv-section" id="practice">
           <h2 class="cv-section-title">实践活动</h2>
-          <ul class="cv-list">
-            <li
+          <div class="timeline">
+            <div
               v-for="(item, idx) in cvData.practice"
               :key="idx"
-              class="cv-list-item"
-            >{{ item }}</li>
-          </ul>
+              class="timeline-item"
+            >
+              <div class="timeline-marker"></div>
+              <div class="timeline-period">{{ item.period }}</div>
+              <div class="timeline-content">{{ item.content }}</div>
+            </div>
+          </div>
         </div>
+
 
         <!-- 技能掌握 -->
         <div class="cv-section" id="skills">
@@ -280,8 +360,36 @@
 </template>
 
 <script setup>
+import { onMounted, onUnmounted, nextTick, watch } from 'vue'
 import { usePortfolio } from './app.js'
+import { initTetris, destroyTetris } from './tetris.js'
 import './assets/style.css'
+
+// 跳转到对应项目并高亮闪烁
+function scrollToProject(projId) {
+  // 1. 找到目标元素
+  const targetEl = document.getElementById(projId);
+  if (!targetEl) return;
+
+  // 2. 滚动到视图中间
+  targetEl.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+
+  // 3. 高亮闪烁两次
+  targetEl.style.transition = 'background-color 0.4s ease';
+  const flash = () => {
+    targetEl.style.backgroundColor = '#fffbeb'; // 高亮淡黄色
+    setTimeout(() => {
+      targetEl.style.backgroundColor = ''; // 恢复
+    }, 400);
+  };
+  
+  // 闪2次（第一次立即执行，第二次延迟850ms）
+  flash();
+  setTimeout(flash, 850);
+}
 
 const {
   info,
@@ -299,7 +407,34 @@ const {
   currentPage,
   navigateTo,
 } = usePortfolio()
+
+// 初始化俄罗斯方块游戏
+function tryInitTetris() {
+  const canvas = document.getElementById('gameCanvas')
+  if (canvas) {
+    initTetris()
+  } else {
+    // 如果 DOM 还没渲染好，稍后重试
+    setTimeout(tryInitTetris, 100)
+  }
+}
+
+// 等待 info 加载完成、DOM 渲染后再初始化
+watch(info, (val) => {
+  if (val) {
+    nextTick(() => {
+      tryInitTetris()
+    })
+  }
+})
+
+onUnmounted(() => {
+  destroyTetris()
+})
 </script>
+
+
+
 
 <style>
 /* 移动端汉堡菜单展开（Vue 用 class 替代 checkbox 方案） */
