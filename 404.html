@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>胡耀芝 — 个人主页</title>
+  <script>
+    // GitHub Pages SPA 重定向：将 404 页面重定向到 index.html
+    sessionStorage.redirect = location.href;
+  </script>
+  <meta http-equiv="refresh" content="0;URL='/me/'">
+</head>
+<body>
+  <script>
+    // 如果 meta refresh 没生效，用 JS 跳转
+    location.href = '/me/';
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+[
+  { "label": "About",    "href": "#about",    "id": "about" },
+  { "label": "SOM, ZJU", "href": "http://www.som.zju.edu.cn/", "id": "lab", "external": true, "className": "nav-lab" },
+  { "label": "CV",       "href": "#cv",       "id": "cv" },
+  { "label": "实践活动",  "href": "#practice", "id": "practice" },
+  { "label": "技能掌握",  "href": "#skills",   "id": "skills" },
+  { "label": "阅读书目",  "href": "#books",    "id": "books" }
+]

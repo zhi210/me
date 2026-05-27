@@ -1,0 +1,107 @@
+[
+  {
+    "id": "proj-1",
+    "title": "健身房数据库构建",
+    "cardImg": "images/projects/proj1.png",
+    "cardImgAlt": "健身房数据库项目",
+    "cardTech": "SQL Server / ER图 / 数据字典",
+    "cardDesc": "需求分析、概念设计到系统实现全流程",
+    "thumbImg": "images/projects/proj1_thumb.png",
+    "thumbImgAlt": "健身房数据库",
+    "fullTitle": "健身房信息管理数据库系统设计与实现",
+    "authors": [
+      { "name": "胡耀芝", "primary": true },
+      { "name": "（团队合作项目）", "primary": false }
+    ],
+    "venue": "浙江大学数据库技术课程项目",
+    "venueDate": "2024年春",
+    "description": "项目任务拆分为需求分析、概念设计、逻辑结构设计和数据库系统实现。以真实健身房运作为参考，以 SQL Server 为平台，流程图、ER图、数据字典为工具。负责 ER 图设计、数据字典构建及部分代码编写，构建了体现会员、课程、教练、器材与工作人员关系并实现信息操作的完整数据库。",
+    "tags": ["SQL Server", "ER图", "数据字典", "关系模式设计"],
+    "category": "数据库系统设计",
+    "cvDescription": "在构建健身房数据库项目中，项目任务拆分为需求分析、概念设计、逻辑结构设计和数据库系统实现。过程参考真实的健身房运作，以 SQL Server 为平台，流程图、ER图、数据字典为工具。我负责 ER 图设计、数据字典的构建及部分代码的编写。构建了能体现会员、课程、教练、器材与各种工作人员的关系并实现信息操作的数据库。"
+  },
+  {
+    "id": "proj-2",
+    "title": "二手书平台",
+    "cardImg": "images/projects/pro4.jpg",
+    "cardImgAlt": "二手书平台",
+    "cardTech": "SQLite / 原型UI设计 / 前后端开发",
+    "cardDesc": "搭建浙大同学自己的二手书交易平台",
+    "thumbImg": "images/projects/pro4.jpg",
+    "thumbImgAlt": "二手书平台",
+    "fullTitle": "二手书交易平台：搭建浙大同学自己的二手书交易平台",
+    "authors": [
+      { "name": "胡耀芝", "primary": true },
+      { "name": "（团队合作项目）", "primary": false }
+    ],
+    "venue": "浙江大学课程项目",
+    "venueDate": "2026年春",
+    "description": "目标是搭建浙大同学自己的二手书交易平台，我负责前期的原型UI设计，使用sqlite等工具实现了教材市场、心愿广场、智慧购书清单、发布书籍等功能，最终得到了完整前后端平台，同学通过平台可以在统一身份认证后同步课表、买书卖书求书、分享笔记、站内聊天等。",
+    "tags": ["SQLite", "原型UI设计", "前后端开发", "教材市场", "心愿广场"],
+    "category": "全栈开发",
+    "cvDescription": "在二手书平台项目中，目标是搭建浙大同学自己的二手书交易平台，我负责前期的原型UI设计，使用sqlite等工具实现了教材市场、心愿广场、智慧购书清单、发布书籍等功能，最终得到了完整前后端平台，同学通过平台可以在统一身份认证后同步课表、买书卖书求书、分享笔记、站内聊天等。"
+  },
+  {
+    "id": "proj-3",
+    "title": "社交媒体流行度预测",
+    "cardImg": "images/projects/proj5.png",
+    "cardImgAlt": "社交媒体流行度预测",
+    "cardTech": "Python / 多模态 / 大模型 / 前后端",
+    "cardDesc": "构建流行度预测模型并实现辅助创作",
+    "thumbImg": "images/projects/proj5.png",
+    "thumbImgAlt": "社交媒体流行度预测",
+    "fullTitle": "社交媒体的多模态数据流行度预测：构建预测模型并实现辅助创作",
+    "authors": [
+      { "name": "胡耀芝", "primary": true },
+      { "name": "（SRTP国创科研训练项目）", "primary": false }
+    ],
+    "venue": "浙江大学SRTP国家级大学生创新创业训练计划",
+    "venueDate": "2025-2026年",
+    "description": "目标是构建流行度预测模型并基于此实现辅助创作，我爬取了分类小红书帖子数据，将微调后更适配中文数据集的模型接入到辅助创作平台，并完成了平台前后端的搭建，多轮调用大语言模型完成辅助创作功能，最终作为浙大管院优秀国创科研训练项目结项。",
+    "tags": ["Python", "多模态", "大语言模型", "流行度预测", "前后端开发"],
+    "category": "机器学习与数据分析",
+    "cvDescription": "在社交媒体的多模态数据流行度预测中，目标是构建流行度预测模型并基于此实现辅助创作，我爬取了分类小红书帖子数据，将微调后更适配中文数据集的模型接入到辅助创作平台，并完成了平台前后端的搭建，多轮调用大语言模型完成辅助创作功能，最终作为浙大管院优秀国创科研训练项目结项。"
+  },
+  {
+    "id": "proj-4",
+    "title": "泰坦尼克号生存预测",
+    "cardImg": "images/projects/proj2.png",
+    "cardImgAlt": "泰坦尼克号生存预测",
+    "cardTech": "Python / KNN / 逻辑回归 / ROC曲线",
+    "cardDesc": "数据清洗、模型构建到性能评估全流程",
+    "thumbImg": "images/projects/proj2_thumb.png",
+    "thumbImgAlt": "泰坦尼克号生存预测",
+    "fullTitle": "泰坦尼克号乘客生存预测：从数据处理到模型优化全流程",
+    "authors": [
+      { "name": "胡耀芝", "primary": true },
+      { "name": "（独立完成）", "primary": false }
+    ],
+    "venue": "浙江大学商务数据挖掘课程项目",
+    "venueDate": "2024年春",
+    "description": "独立编写函数读取、清洗数据并整理为 Passenger 类列表；实现 KNN 和逻辑回归模型及相关验证函数，计算多指标评估性能；编写函数绘制 ROC 曲线辅助超参数调优。成功提升预测准确性，积累了从数据处理到模型优化全流程的独立项目经验。",
+    "tags": ["Python", "KNN", "逻辑回归", "ROC曲线", "交叉验证"],
+    "category": "机器学习与数据分析",
+    "cvDescription": "在泰坦尼克号乘客生存预测项目中，面对利用机器学习分析乘客生存情况的任务，我独自编写函数读取、清洗数据并整理为 Passenger 类列表；实现 KNN 和逻辑回归模型及相关验证函数，计算指标评估性能；编写函数绘制 ROC 曲线辅助调优。最终成功提升预测准确性，积累了从数据处理到模型优化全流程的独立项目经验。"
+  },
+  {
+    "id": "proj-5",
+    "title": "商标目标检测",
+    "cardImg": "images/projects/proj3.png",
+    "cardImgAlt": "商标目标检测",
+    "cardTech": "YOLO / 通义千问大模型 / mAP评估",
+    "cardDesc": "多模型对比、大模型调用与效果分析",
+    "thumbImg": "images/projects/proj3_thumb.png",
+    "thumbImgAlt": "商标目标检测",
+    "fullTitle": "商标目标检测：多方法对比与大模型评估分析",
+    "authors": [
+      { "name": "胡耀芝", "primary": true },
+      { "name": "（SRTP国创科研项目子课题）", "primary": false }
+    ],
+    "venue": "浙江大学SRTP国家级大学生创新创业训练计划",
+    "venueDate": "2024年",
+    "description": "为寻找最优检测方法，使用 YOLO 不同模型对比效果，并调用通义千问大模型批量检测。观察到大模型分类效果较好，但检测结果低于传统模型；抽样分析发现大模型输出与人工标注习惯存在偏差，导致 mAP 值偏低。完成了对多种检测方案的系统性对比评估。",
+    "tags": ["YOLO", "通义千问", "目标检测", "mAP评估", "大模型API"],
+    "category": "机器学习与数据分析",
+    "cvDescription": "在商标的目标检测项目中，为了找到效果最好的检测方法，我首先使用了 YOLO 的不同模型对比了效果，调用通义千问大模型批量检测，观察到大模型的分类效果较好，但检测结果低于模型，抽样发现在评估中大模型结果与人工标注习惯有偏差，因此 MAP 值较低。"
+  }
+]

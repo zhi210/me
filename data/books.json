@@ -1,0 +1,98 @@
+[
+  {
+    "title": "《数据之美》",
+    "author": "Nathan Yau",
+    "date": "2023年10月",
+    "cover": "images/books/data_visualization.png",
+    "coverAlt": "数据之美",
+    "link": "https://item.jd.com/10055719306770.html"
+  },
+  {
+    "title": "《深度学习入门 基于Python的理论与实现》",
+    "author": "斋藤康毅",
+    "date": "2023年12月",
+    "cover": "images/books/book2.jpg",
+    "coverAlt": "深度学习入门 基于Python的理论与实现",
+    "link": "https://item.jd.com/10219991841574.html?pcdk=AAcXQVcvO0oIE1Gu9hLiCfTpAKEOlcJceSNxVxEgVaI2KtcXor2F1W2v7C3VV5xN.3z6a.aI3x&spmTag=YTAyMTkuYjAwMjM1Ni5jMDAwMDcxNjMuNCU0MDE3Nzk4NTE3NDI4MzQlMjMyMTE1OTI1MjY3JTIzMTIyOTA5MTQ3MCUyQ2EwMjQwLmIwMDI0OTMuYzAwMDA0MDI3LjExJTIzc2t1X2NhcmQlNDAxNzc5ODUxOTE1MDY0JTIzMjExNTkyNTI2NyUyMzExMjY0MDc2Njc"
+  },
+  {
+    "title": "《算法导论》",
+    "author": "Thomas H. Cormen",
+    "date": "2024年01月",
+    "cover": "images/books/algorithms.png",
+    "coverAlt": "算法导论",
+    "link": "https://item.jd.com/10110236527917.html"
+  },
+  {
+    "title": "《Python数据科学手册》",
+    "author": "Jake VanderPlas",
+    "date": "2024年02月",
+    "cover": "images/books/python_datascience.png",
+    "coverAlt": "Python数据科学手册",
+    "link": "https://item.jd.com/10107139690995.html"
+  },
+  {
+    "title": "《商业模式新生代》",
+    "author": "Alexander Osterwalder",
+    "date": "2024年05月",
+    "cover": "images/books/business_model_generation.png",
+    "coverAlt": "商业模式新生代",
+    "link": "https://item.jd.com/10197573762569.html"
+  },
+  {
+    "title": "《计量经济学》",
+    "author": "李子奈 潘文卿",
+    "date": "2024年08月",
+    "cover": "images/books/econometrics.png",
+    "coverAlt": "计量经济学",
+    "link": "https://item.jd.com/14549901.html"
+  },
+    {
+    "title": "《微观经济学》",
+    "author": "达龙·阿西莫格鲁",
+    "date": "2024年08月",
+    "cover": "images/books/book12.png",
+    "coverAlt": "微观经济学",
+    "link": "https://item.jd.com/10119757899260.html"
+  },
+  {
+    "title": "《理想国》",
+    "author": "柏拉图",
+    "date": "2024年12月",
+    "cover": "images/books/book3.jpg",
+    "coverAlt": "理想国",
+    "link": "https://item.jd.com/13441302.html?pcdk=ylrpObChVC8fn9mQpwRHxN7bTCpfBWx58egMI8XTPfC7tuHQG_pHDHxJUmZSnag1.3z6a.aI3x&spmTag=YTAyMTkuYjAwMjM1Ni5jMDAwMDcxNjMuNCU0MDE3Nzk4NTE3NDI4MzQlMjMyMTE1OTI1MjY3JTIzMTIyOTA5MTQ3MCUyQ2EwMjQwLmIwMDI0OTMuYzAwMDA0MDI3LjQlMjNza3VfY2FyZCU0MDE3Nzk4NTIyNTQ5MDIlMjMyMTE1OTI1MjY3JTIzODgyNjAzNjc2"
+  },
+  {
+    "title": "《精益创业》",
+    "author": "Eric Ries",
+    "date": "2025年02月",
+    "cover": "images/books/lean_startup.png",
+    "coverAlt": "精益创业",
+    "link": "https://item.jd.com/10050047899201.html"
+  },
+  {
+    "title": "《深度学习》",
+    "author": "Ian Goodfellow",
+    "date": "2025年04月",
+    "cover": "images/books/deep_learning.png",
+    "coverAlt": "深度学习",
+    "link": "https://item.jd.com/10135262787752.html"
+  },
+  {
+    "title": "《宁静的力量》",
+    "author": "Ryan Holiday",
+    "date": "2025年08月",
+    "cover": "images/books/stillness.png",
+    "coverAlt": "宁静的力量",
+    "link": "https://item.jd.com/10034623741007.html"
+  },
+  {
+    "title": "《机器学习实战》",
+    "author": "奥雷利安·杰龙",
+    "date": "2025年12月",
+    "cover": "images/books/book11.png",
+    "coverAlt": "机器学习实战",
+    "link": "https://item.jd.com/10204137401092.html"
+  }
+]
